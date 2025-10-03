@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Home • Personal Portfolio{% endblock %}
+{% block content %}
+<section class="grid md:grid-cols-2 gap-6 items-center">
+  <div class="space-y-3">
+    <h1 class="text-2xl md:text-3xl font-semibold leading-tight">Bridging ML Research and Production-Ready Code</h1>
+    <p class="text-sm text-gray-700 leading-relaxed">
+      3rd-year B.Tech (AI & DS) student pursuing AI Software Development with a core focus on Computer Vision. I build compact, reliable, and deployable ML systems using Python, PyTorch, and modern tooling.
+    </p>
+    <div class="flex gap-2 pt-1">
+      <a href="/projects" class="btn-primary">View Projects</a>
+      <a href="/contact" class="btn-secondary">Contact</a>
+    </div>
+  </div>
+  <div class="rounded-lg p-5 bg-gradient-to-br from-neutral-900 to-neutral-700">
+    <div class="text-white text-sm space-y-2">
+      <p class="opacity-90">Featured: Real-Time Traffic Sign Detection</p>
+      <div class="grid grid-cols-3 gap-2 text-xs">
+        <div class="card-muted">mAP: 94.5%</div>
+        <div class="card-muted">PyTorch</div>
+        <div class="card-muted">Quantized</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mt-8">
+  <h2 class="section-title">Highlighted Work</h2>
+  <div class="grid md:grid-cols-3 gap-4">
+    <a href="/projects" class="card">
+      <h3 class="card-title">Traffic Sign Detection</h3>
+      <p class="card-text">YOLOv5, PyTorch, OpenCV, Flask API</p>
+    </a>
+    <a href="/projects" class="card">
+      <h3 class="card-title">Review Sentiment Analyzer</h3>
+      <p class="card-text">NLTK, spaCy, Scikit-learn, Streamlit</p>
+    </a>
+    <a href="/projects" class="card">
+      <h3 class="card-title">SQL Data Prep Optimization</h3>
+      <p class="card-text">MySQL, SQLAlchemy, Python</p>
+    </a>
+  </div>
+</section>
+{% endblock %}

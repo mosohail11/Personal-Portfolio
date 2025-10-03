@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Contact • Personal Portfolio{% endblock %}
+{% block content %}
+<h1 class="section-title">Contact</h1>
+<div class="grid md:grid-cols-3 gap-6">
+  <div class="md:col-span-2 space-y-3">
+    <form class="space-y-3">
+      <div class="grid md:grid-cols-2 gap-3">
+        <input class="input" placeholder="Full name" />
+        <input class="input" placeholder="Email" />
+      </div>
+      <input class="input" placeholder="Subject" />
+      <textarea class="textarea" rows="5" placeholder="Your message"></textarea>
+      <button type="button" class="btn-primary">Send Message</button>
+    </form>
+  </div>
+  <aside class="space-y-3">
+    <div class="card p-4 text-sm text-gray-700">
+      <p><span class="font-medium">Email:</span> you@example.com</p>
+      <p><span class="font-medium">Location:</span> Hyderabad, IN</p>
+      <p><span class="font-medium">GitHub:</span> github.com/yourhandle</p>
+    </div>
+  </aside>
+</div>
+{% endblock %}

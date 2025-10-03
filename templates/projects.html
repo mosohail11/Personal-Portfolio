@@ -1,0 +1,389 @@
+{% extends "base.html" %}
+{% block title %}Projects • Personal Portfolio{% endblock %}
+{% block content %}
+
+<!-- Hero Section -->
+<section class="mb-12">
+  <div class="text-center mb-8">
+    <h1 class="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+      My AI Projects Portfolio 🚀
+    </h1>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+      From computer vision to NLP, here's how I turn complex problems into elegant solutions. 
+      Each project represents a journey of learning, building, and optimizing.
+    </p>
+  </div>
+  
+  <!-- Stats Counter -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+    <div class="text-center p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200">
+      <div class="text-2xl font-bold text-blue-600 counter" data-target="3">0</div>
+      <div class="text-sm text-gray-600">Projects Built</div>
+    </div>
+    <div class="text-center p-4 bg-gradient-to-br from-green-50 to-green-100 rounded-xl border border-green-200">
+      <div class="text-2xl font-bold text-green-600 counter" data-target="94">0</div>
+      <div class="text-sm text-gray-600">Max Accuracy %</div>
+    </div>
+    <div class="text-center p-4 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl border border-purple-200">
+      <div class="text-2xl font-bold text-purple-600 counter" data-target="80">0</div>
+      <div class="text-sm text-gray-600">Performance Boost %</div>
+    </div>
+    <div class="text-center p-4 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl border border-orange-200">
+      <div class="text-2xl font-bold text-orange-600 counter" data-target="10">0</div>
+      <div class="text-sm text-gray-600">Technologies Used</div>
+    </div>
+  </div>
+</section>
+
+<!-- Filter Buttons -->
+<section class="mb-8">
+  <div class="flex flex-wrap justify-center gap-3">
+    <button class="filter-btn active" data-filter="all">
+      🎯 All Projects
+    </button>
+    <button class="filter-btn" data-filter="computer-vision">
+      👁️ Computer Vision
+    </button>
+    <button class="filter-btn" data-filter="nlp">
+      💬 NLP
+    </button>
+    <button class="filter-btn" data-filter="optimization">
+      ⚡ Optimization
+    </button>
+  </div>
+</section>
+
+<!-- Projects Grid -->
+<section class="projects-container">
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    
+    <!-- Project 1: Traffic Sign Detection -->
+    <div class="project-card computer-vision" data-category="computer-vision">
+      <div class="relative overflow-hidden rounded-t-xl bg-gradient-to-br from-red-500 via-orange-500 to-yellow-500 h-48 flex items-center justify-center">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="relative z-10 text-center text-white">
+          <div class="text-6xl mb-2">🚦</div>
+          <div class="text-sm font-medium">Computer Vision</div>
+        </div>
+        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-xs text-white font-medium">
+          Featured
+        </div>
+      </div>
+      
+      <div class="p-6 bg-white rounded-b-xl border-x border-b border-gray-200">
+        <div class="flex items-start justify-between mb-3">
+          <h3 class="text-lg font-semibold text-gray-900 leading-tight">Real-Time Traffic Sign Detection</h3>
+          <div class="flex items-center gap-1 text-green-600 text-sm font-medium">
+            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+            Live
+          </div>
+        </div>
+        
+        <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+          Advanced YOLO-based detection system achieving 94.5% mAP with 30% faster inference through intelligent quantization techniques.
+        </p>
+        
+        <!-- Metrics -->
+        <div class="grid grid-cols-2 gap-3 mb-4">
+          <div class="text-center p-2 bg-gray-50 rounded-lg">
+            <div class="text-lg font-bold text-gray-900">94.5%</div>
+            <div class="text-xs text-gray-600">mAP Score</div>
+          </div>
+          <div class="text-center p-2 bg-gray-50 rounded-lg">
+            <div class="text-lg font-bold text-gray-900">30%</div>
+            <div class="text-xs text-gray-600">Faster</div>
+          </div>
+        </div>
+        
+        <div class="tech-chips mb-4">
+          <span class="tech-chip-primary">PyTorch</span>
+          <span class="tech-chip-secondary">OpenCV</span>
+          <span class="tech-chip-accent">Docker</span>
+        </div>
+        
+        <a href="/projects/traffic-sign-detection" class="project-link">
+          <span>Explore Project</span>
+          <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Project 2: Sentiment Analyzer -->
+    <div class="project-card nlp" data-category="nlp">
+      <div class="relative overflow-hidden rounded-t-xl bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 h-48 flex items-center justify-center">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="relative z-10 text-center text-white">
+          <div class="text-6xl mb-2">💭</div>
+          <div class="text-sm font-medium">Natural Language Processing</div>
+        </div>
+        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-xs text-white font-medium">
+          Production
+        </div>
+      </div>
+      
+      <div class="p-6 bg-white rounded-b-xl border-x border-b border-gray-200">
+        <div class="flex items-start justify-between mb-3">
+          <h3 class="text-lg font-semibold text-gray-900 leading-tight">E-Commerce Review Sentiment Analyzer</h3>
+          <div class="flex items-center gap-1 text-blue-600 text-sm font-medium">
+            <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+            Deployed
+          </div>
+        </div>
+        
+        <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+          Intelligent sentiment analysis processing 10k+ reviews with 88% accuracy, deployed on Streamlit for real-time insights.
+        </p>
+        
+        <!-- Metrics -->
+        <div class="grid grid-cols-2 gap-3 mb-4">
+          <div class="text-center p-2 bg-gray-50 rounded-lg">
+            <div class="text-lg font-bold text-gray-900">10K+</div>
+            <div class="text-xs text-gray-600">Reviews</div>
+          </div>
+          <div class="text-center p-2 bg-gray-50 rounded-lg">
+            <div class="text-lg font-bold text-gray-900">88%</div>
+            <div class="text-xs text-gray-600">Accuracy</div>
+          </div>
+        </div>
+        
+        <div class="tech-chips mb-4">
+          <span class="tech-chip-primary">NLTK</span>
+          <span class="tech-chip-secondary">spaCy</span>
+          <span class="tech-chip-accent">Scikit-learn</span>
+        </div>
+        
+        <a href="/projects/sentiment-analyzer" class="project-link">
+          <span>Explore Project</span>
+          <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Project 3: SQL Optimization -->
+    <div class="project-card optimization" data-category="optimization">
+      <div class="relative overflow-hidden rounded-t-xl bg-gradient-to-br from-green-500 via-teal-500 to-cyan-500 h-48 flex items-center justify-center">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="relative z-10 text-center text-white">
+          <div class="text-6xl mb-2">⚡</div>
+          <div class="text-sm font-medium">Performance Optimization</div>
+        </div>
+        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-xs text-white font-medium">
+          Optimized
+        </div>
+      </div>
+      
+      <div class="p-6 bg-white rounded-b-xl border-x border-b border-gray-200">
+        <div class="flex items-start justify-between mb-3">
+          <h3 class="text-lg font-semibold text-gray-900 leading-tight">SQL Database Optimization for AI Data Prep</h3>
+          <div class="flex items-center gap-1 text-green-600 text-sm font-medium">
+            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+            Optimized
+          </div>
+        </div>
+        
+        <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+          Dramatically improved ETL pipeline performance, reducing processing time from 15 minutes to 3 minutes for 1GB datasets.
+        </p>
+        
+        <!-- Metrics -->
+        <div class="grid grid-cols-2 gap-3 mb-4">
+          <div class="text-center p-2 bg-gray-50 rounded-lg">
+            <div class="text-lg font-bold text-gray-900">80%</div>
+            <div class="text-xs text-gray-600">Time Saved</div>
+          </div>
+          <div class="text-center p-2 bg-gray-50 rounded-lg">
+            <div class="text-lg font-bold text-gray-900">1GB</div>
+            <div class="text-xs text-gray-600">Dataset Size</div>
+          </div>
+        </div>
+        
+        <div class="tech-chips mb-4">
+          <span class="tech-chip-primary">MySQL</span>
+          <span class="tech-chip-secondary">Python</span>
+          <span class="tech-chip-accent">SQLAlchemy</span>
+        </div>
+        
+        <a href="/projects/sql-optimization" class="project-link">
+          <span>Explore Project</span>
+          <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="mt-16 text-center">
+  <div class="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 text-white">
+    <h2 class="text-2xl font-bold mb-4">Want to See More? 🔍</h2>
+    <p class="text-gray-300 mb-6 max-w-2xl mx-auto">
+      These are just highlights from my portfolio. I'm constantly building, learning, and pushing the boundaries of what's possible with AI.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="https://github.com/yourusername" class="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+        </svg>
+        View on GitHub
+      </a>
+      <a href="/contact" class="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-black transition-colors flex items-center gap-2">
+        💼 Discuss a Project
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .filter-btn {
+    @apply px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border border-gray-300 text-gray-600 hover:border-gray-400 hover:text-gray-800;
+  }
+  
+  .filter-btn.active {
+    @apply bg-black text-white border-black;
+  }
+  
+  .project-card {
+    @apply transform transition-all duration-500 hover:scale-105 hover:shadow-xl opacity-100;
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .project-card.hidden {
+    @apply opacity-0 scale-95 pointer-events-none;
+  }
+  
+  .project-link {
+    @apply group flex items-center justify-between w-full px-4 py-3 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors;
+  }
+  
+  .tech-chip-primary {
+    @apply inline-flex text-xs bg-blue-100 text-blue-800 rounded-full px-3 py-1 mr-2 mt-2 font-medium;
+  }
+  
+  .tech-chip-secondary {
+    @apply inline-flex text-xs bg-purple-100 text-purple-800 rounded-full px-3 py-1 mr-2 mt-2 font-medium;
+  }
+  
+  .tech-chip-accent {
+    @apply inline-flex text-xs bg-green-100 text-green-800 rounded-full px-3 py-1 mr-2 mt-2 font-medium;
+  }
+  
+  .counter {
+    transition: all 0.3s ease;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes countUp {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+</style>
+
+<script>
+  // Counter Animation
+  function animateCounters() {
+    const counters = document.querySelectorAll('.counter');
+    
+    counters.forEach(counter => {
+      const target = parseInt(counter.getAttribute('data-target'));
+      const duration = 2000; // 2 seconds
+      const increment = target / (duration / 16); // 60fps
+      let current = 0;
+      
+      const updateCounter = () => {
+        if (current < target) {
+          current += increment;
+          counter.textContent = Math.floor(current);
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.textContent = target;
+        }
+      };
+      
+      updateCounter();
+    });
+  }
+  
+  // Filter Functionality
+  function initializeFilters() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const filter = btn.getAttribute('data-filter');
+        
+        // Filter projects
+        projectCards.forEach(card => {
+          if (filter === 'all' || card.classList.contains(filter)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  }
+  
+  // Intersection Observer for animations
+  function initializeAnimations() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.target.classList.contains('counter')) {
+            animateCounters();
+          }
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    document.querySelectorAll('.counter').forEach(counter => {
+      observer.observe(counter.parentElement);
+    });
+  }
+  
+  // Initialize everything when DOM is loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    initializeFilters();
+    initializeAnimations();
+    
+    // Stagger project card animations
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.2}s`;
+    });
+  });
+  
+  // Add hover sound effect (optional)
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.transform = 'translateY(-8px) scale(1.02)';
+    });
+    
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'translateY(0) scale(1)';
+    });
+  });
+</script>
+
+{% endblock %}

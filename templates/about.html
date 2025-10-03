@@ -1,0 +1,310 @@
+{% extends "base.html" %}
+{% block title %}About • Personal Portfolio{% endblock %}
+{% block content %}
+
+<!-- Hero Section with Animated Introduction -->
+<section class="mb-12">
+  <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 via-gray-800 to-black p-8 text-white">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+    <div class="relative z-10">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center text-2xl font-bold animate-pulse">
+          MS
+        </div>
+        <div>
+          <h1 class="text-3xl font-bold mb-2 typing-animation">Mohammed Sohail Ahmed</h1>
+          <p class="text-blue-300 text-lg">AI Engineer • Computer Vision Enthusiast • Code Craftsman</p>
+        </div>
+      </div>
+      <p class="text-lg leading-relaxed text-gray-300 max-w-3xl">
+        🚀 Transforming ideas into intelligent systems. I'm a 3rd-year B.Tech (AI & DS) student at ISL Engineering College, Hyderabad, 
+        passionate about bridging the gap between cutting-edge research and real-world applications. 
+        <span class="text-blue-300 font-semibold">From notebook to production</span> - that's my motto!
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive Journey Timeline -->
+<section class="mb-12">
+  <h2 class="text-2xl font-bold mb-8 text-center">My AI Journey 🛤️</h2>
+  <div class="relative">
+    <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-600 rounded-full"></div>
+    
+    <div class="space-y-12">
+      <!-- Timeline Item 1 -->
+      <div class="flex items-center journey-item opacity-0 transform translate-y-4">
+        <div class="flex-1 text-right pr-8">
+          <div class="bg-white rounded-lg shadow-lg p-4 border-l-4 border-blue-500">
+            <h3 class="font-semibold text-gray-900">🎓 Started AI & DS Journey</h3>
+            <p class="text-sm text-gray-600">Began exploring the fascinating world of artificial intelligence</p>
+            <span class="text-xs text-blue-600 font-medium">2022</span>
+          </div>
+        </div>
+        <div class="w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg z-10"></div>
+        <div class="flex-1 pl-8"></div>
+      </div>
+      
+      <!-- Timeline Item 2 -->
+      <div class="flex items-center journey-item opacity-0 transform translate-y-4">
+        <div class="flex-1 pr-8"></div>
+        <div class="w-4 h-4 bg-purple-500 rounded-full border-4 border-white shadow-lg z-10"></div>
+        <div class="flex-1 pl-8">
+          <div class="bg-white rounded-lg shadow-lg p-4 border-l-4 border-purple-500">
+            <h3 class="font-semibold text-gray-900">🔍 Discovered Computer Vision</h3>
+            <p class="text-sm text-gray-600">Fell in love with teaching machines to see and understand</p>
+            <span class="text-xs text-purple-600 font-medium">2023</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Timeline Item 3 -->
+      <div class="flex items-center journey-item opacity-0 transform translate-y-4">
+        <div class="flex-1 text-right pr-8">
+          <div class="bg-white rounded-lg shadow-lg p-4 border-l-4 border-green-500">
+            <h3 class="font-semibold text-gray-900">🚀 MLOps & Production Focus</h3>
+            <p class="text-sm text-gray-600">Learned to deploy models that actually work in the real world</p>
+            <span class="text-xs text-green-600 font-medium">2024</span>
+          </div>
+        </div>
+        <div class="w-4 h-4 bg-green-500 rounded-full border-4 border-white shadow-lg z-10"></div>
+        <div class="flex-1 pl-8"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills & Interests with Interactive Elements -->
+<section class="grid lg:grid-cols-3 gap-8 mb-12">
+  <!-- Core Expertise -->
+  <div class="skill-card bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-6 border border-blue-200 hover:shadow-lg transition-all duration-300">
+    <div class="flex items-center mb-4">
+      <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white text-xl mr-3">
+        🧠
+      </div>
+      <h3 class="text-lg font-semibold text-gray-900">Core Expertise</h3>
+    </div>
+    <div class="space-y-3">
+      <div class="skill-item">
+        <div class="flex justify-between items-center mb-1">
+          <span class="text-sm font-medium text-gray-700">Computer Vision</span>
+          <span class="text-xs text-gray-500">90%</span>
+        </div>
+        <div class="w-full bg-gray-200 rounded-full h-2">
+          <div class="bg-blue-500 h-2 rounded-full skill-bar" style="width: 0%" data-width="90%"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="flex justify-between items-center mb-1">
+          <span class="text-sm font-medium text-gray-700">ML Systems & MLOps</span>
+          <span class="text-xs text-gray-500">85%</span>
+        </div>
+        <div class="w-full bg-gray-200 rounded-full h-2">
+          <div class="bg-blue-500 h-2 rounded-full skill-bar" style="width: 0%" data-width="85%"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="flex justify-between items-center mb-1">
+          <span class="text-sm font-medium text-gray-700">Model Optimization</span>
+          <span class="text-xs text-gray-500">80%</span>
+        </div>
+        <div class="w-full bg-gray-200 rounded-full h-2">
+          <div class="bg-blue-500 h-2 rounded-full skill-bar" style="width: 0%" data-width="80%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Currently Exploring -->
+  <div class="skill-card bg-gradient-to-br from-purple-50 to-pink-100 rounded-xl p-6 border border-purple-200 hover:shadow-lg transition-all duration-300">
+    <div class="flex items-center mb-4">
+      <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center text-white text-xl mr-3">
+        🔬
+      </div>
+      <h3 class="text-lg font-semibold text-gray-900">Currently Exploring</h3>
+    </div>
+    <div class="space-y-3">
+      <div class="exploration-item p-3 bg-white rounded-lg border border-purple-100 hover:border-purple-300 transition-colors cursor-pointer">
+        <div class="flex items-center">
+          <span class="text-2xl mr-3">🔥</span>
+          <div>
+            <h4 class="text-sm font-medium text-gray-900">PyTorch Best Practices</h4>
+            <p class="text-xs text-gray-600">Mastering efficient model development</p>
+          </div>
+        </div>
+      </div>
+      <div class="exploration-item p-3 bg-white rounded-lg border border-purple-100 hover:border-purple-300 transition-colors cursor-pointer">
+        <div class="flex items-center">
+          <span class="text-2xl mr-3">⚡</span>
+          <div>
+            <h4 class="text-sm font-medium text-gray-900">Lightweight Deployment</h4>
+            <p class="text-xs text-gray-600">Edge AI and mobile optimization</p>
+          </div>
+        </div>
+      </div>
+      <div class="exploration-item p-3 bg-white rounded-lg border border-purple-100 hover:border-purple-300 transition-colors cursor-pointer">
+        <div class="flex items-center">
+          <span class="text-2xl mr-3">📊</span>
+          <div>
+            <h4 class="text-sm font-medium text-gray-900">Data-Centric AI</h4>
+            <p class="text-xs text-gray-600">Quality data, better models</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fun Facts & Personality -->
+  <div class="skill-card bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-6 border border-green-200 hover:shadow-lg transition-all duration-300">
+    <div class="flex items-center mb-4">
+      <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center text-white text-xl mr-3">
+        ✨
+      </div>
+      <h3 class="text-lg font-semibold text-gray-900">Fun Facts</h3>
+    </div>
+    <div class="space-y-4">
+      <div class="fun-fact p-3 bg-white rounded-lg border border-green-100">
+        <div class="flex items-start">
+          <span class="text-2xl mr-3">☕</span>
+          <div>
+            <p class="text-sm text-gray-700">Powered by coffee and curiosity</p>
+          </div>
+        </div>
+      </div>
+      <div class="fun-fact p-3 bg-white rounded-lg border border-green-100">
+        <div class="flex items-start">
+          <span class="text-2xl mr-3">🎯</span>
+          <div>
+            <p class="text-sm text-gray-700">Debugging is my favorite puzzle game</p>
+          </div>
+        </div>
+      </div>
+      <div class="fun-fact p-3 bg-white rounded-lg border border-green-100">
+        <div class="flex items-start">
+          <span class="text-2xl mr-3">🌟</span>
+          <div>
+            <p class="text-sm text-gray-700">Dream: AI that makes life better for everyone</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="text-center">
+  <div class="bg-gradient-to-r from-gray-900 to-black rounded-2xl p-8 text-white">
+    <h2 class="text-2xl font-bold mb-4">Let's Build Something Amazing Together! 🚀</h2>
+    <p class="text-gray-300 mb-6 max-w-2xl mx-auto">
+      I'm actively seeking Summer 2026 internships in AI/ML Engineering and ML Software Development. 
+      Ready to bring fresh perspectives and boundless enthusiasm to your team!
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="#" class="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2">
+        📄 Download Resume
+      </a>
+      <a href="/contact" class="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-black transition-colors flex items-center gap-2">
+        💬 Let's Connect
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  .typing-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(40, end);
+  }
+  
+  .journey-item {
+    transition: all 0.6s ease-out;
+  }
+  
+  .journey-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .skill-card {
+    transition: all 0.3s ease;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .skill-bar {
+    transition: width 2s ease-out;
+  }
+  
+  .exploration-item:hover {
+    transform: scale(1.02);
+  }
+  
+  .fun-fact {
+    transition: all 0.3s ease;
+  }
+  
+  .fun-fact:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+</style>
+
+<script>
+  // Animate journey timeline on scroll
+  const observerOptions = {
+    threshold: 0.3,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      }
+    });
+  }, observerOptions);
+  
+  document.querySelectorAll('.journey-item').forEach(item => {
+    observer.observe(item);
+  });
+  
+  // Animate skill bars
+  const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const skillBars = entry.target.querySelectorAll('.skill-bar');
+        skillBars.forEach(bar => {
+          const width = bar.getAttribute('data-width');
+          setTimeout(() => {
+            bar.style.width = width;
+          }, 500);
+        });
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  document.querySelectorAll('.skill-card').forEach(card => {
+    skillObserver.observe(card);
+  });
+  
+  // Add hover effects to exploration items
+  document.querySelectorAll('.exploration-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      item.style.transform = 'scale(1.02)';
+    });
+    
+    item.addEventListener('mouseleave', () => {
+      item.style.transform = 'scale(1)';
+    });
+  });
+</script>
+
+{% endblock %}
