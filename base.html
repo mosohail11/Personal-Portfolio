@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Personal Portfolio{% endblock %}</title>
+
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN (for static screens) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#000000',
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+
+    <link rel="stylesheet" href="./Assets/styles.css" />
+  </head>
+  <body class="font-sans text-gray-900 bg-white">
+    <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-gray-200">
+      <nav class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center justify-between h-14">
+          <a href="/" class="text-base font-semibold tracking-tight">AI Portfolio</a>
+          <button class="md:hidden p-2" id="nav-toggle" aria-label="Toggle navigation">
+            <span class="block w-5 h-0.5 bg-gray-900 mb-1"></span>
+            <span class="block w-5 h-0.5 bg-gray-900 mb-1"></span>
+            <span class="block w-5 h-0.5 bg-gray-900"></span>
+          </button>
+          <ul class="hidden md:flex gap-4 text-sm">
+            <li><a class="nav-link" href="/projects.html">Projects</a></li>
+            <li><a class="nav-link" href="/skills.html">Skills</a></li>
+            <li><a class="nav-link" href="/about.html">About</a></li>
+            <li><a class="btn-primary" href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <ul class="mobile-nav hidden flex-col gap-2 pb-3 md:hidden text-sm">
+          <li><a class="nav-link" href="/projects.html">Projects</a></li>
+          <li><a class="nav-link" href="/skills.html">Skills</a></li>
+          <li><a class="nav-link" href="/about.html">About</a></li>
+          <li><a class="btn-primary inline-flex w-max" href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-6">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="border-t border-gray-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 text-xs text-gray-600 flex items-center justify-between">
+        <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+        <div class="flex items-center gap-3">
+          <a class="link" href="#">GitHub</a>
+          <a class="link" href="#">LinkedIn</a>
+          <a class="link" href="#">Resume</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./Assets/main.js"></script>
+  </body>
+</html>

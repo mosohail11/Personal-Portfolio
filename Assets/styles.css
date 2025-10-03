@@ -1,0 +1,47 @@
+:root {
+  --primary: #000000;
+}
+
+.nav-link {
+  @apply text-gray-800 hover:text-gray-900 px-2 py-1 rounded transition;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center px-3 py-2 text-white bg-black hover:bg-neutral-900 rounded-md text-sm shadow-sm;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-3 py-2 text-gray-900 border border-gray-300 hover:bg-gray-50 rounded-md text-sm;
+}
+
+.section-title {
+  @apply text-xl font-semibold mb-3;
+}
+
+.card {
+  @apply rounded-lg border border-gray-200 hover:border-gray-300 transition bg-white p-3;
+}
+
+.card-muted {
+  @apply text-xs bg-white/10 border border-white/20 rounded px-2 py-1 inline-flex items-center justify-center;
+}
+
+.card-title {
+  @apply text-sm font-semibold mb-1;
+}
+
+.card-text {
+  @apply text-sm text-gray-700;
+}
+
+.tech-chips span {
+  @apply inline-flex text-xs bg-gray-100 text-gray-800 rounded px-2 py-1 mr-1 mt-2;
+}
+
+.input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-gray-400;
+}
+
+.textarea {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-gray-400;
+}
